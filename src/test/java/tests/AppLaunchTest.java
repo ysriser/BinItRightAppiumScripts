@@ -9,6 +9,6 @@ public class AppLaunchTest extends ProjectSpecificationMethods {
         // If app launches without crash → test passes
         System.out.println("App launched successfully");
 
-		assert driver != null;
+		Assert.assertNotNull(driver, "Driver should be initialized");
     }
 }
