@@ -28,7 +28,7 @@ public class ProjectSpecificationMethods {
                 .setAutomationName("UiAutomator2")
                 .setApp(apkPath)
 				.setNoReset(false)
-                .autoGrantPermissions();
+                .autoGrantPermissions()
 
 //        UiAutomator2Options options = new UiAutomator2Options()
 //                .setPlatformName("Android")
