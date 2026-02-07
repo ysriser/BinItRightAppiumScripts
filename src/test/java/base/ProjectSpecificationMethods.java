@@ -28,7 +28,8 @@ public class ProjectSpecificationMethods {
                 .setAutomationName("UiAutomator2")
                 .setApp(apkPath)
 				.setNoReset(false)
-                .autoGrantPermissions();
+                .setFullReset(true)
+                .autoGrantPermissions()
 
 //        UiAutomator2Options options = new UiAutomator2Options()
 //                .setPlatformName("Android")
@@ -41,7 +42,7 @@ public class ProjectSpecificationMethods {
 			.amend("uiautomator2ServerInstallTimeout", 120000)
         	.amend("adbExecTimeout", 120000)
         	.amend("uiautomator2ServerLaunchTimeout", 120000);
-		
+
        	 	driver = new AndroidDriver(
         	URI.create("http://127.0.0.1:4723").toURL(),
             options
