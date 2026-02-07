@@ -3,6 +3,8 @@
     <test name="CI Tests">
         <classes>
             <class name="tests.AppLaunchTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.FindRecyclingBinTest"/>
         </classes>
     </test>
 </suite>

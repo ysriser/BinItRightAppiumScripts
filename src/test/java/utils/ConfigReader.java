@@ -13,6 +13,7 @@ public class ConfigReader {
                     .getClassLoader()
                     .getResourceAsStream("config.properties");
 
+            System.out.println("Config stream = " + input);
             if (input == null) {
                 throw new RuntimeException("config.properties not found");
             }
