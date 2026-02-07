@@ -22,13 +22,23 @@ public class ProjectSpecificationMethods {
             throw new RuntimeException("APK path not provided");
         }
 
+//        UiAutomator2Options options = new UiAutomator2Options()
+//				.setPlatformName("Android")
+//                .setDeviceName("Android Emulator")
+//                .setAutomationName("UiAutomator2")
+//                .setApp(apkPath)
+//				.setNoReset(true)
+//                .autoGrantPermissions();
+
         UiAutomator2Options options = new UiAutomator2Options()
-				.setPlatformName("Android")
-                .setDeviceName("Android Emulator")
+                .setPlatformName("Android")
                 .setAutomationName("UiAutomator2")
+                .setDeviceName("Android")
+                .setUdid("8ARY0Q2RN")
                 .setApp(apkPath)
-				.setNoReset(true)
-                .autoGrantPermissions();
+                .setAutoGrantPermissions(true)
+                .setNoReset(false);
+
 
         driver = new AndroidDriver(
         		URI.create("http://127.0.0.1:4723").toURL(),
