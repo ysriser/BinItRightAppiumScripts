@@ -2,7 +2,7 @@
 <suite name="Appium SIT">
     <test name="CI Tests">
         <classes>
-            <class name="tests.LoginTest"/>
+            <class name="tests.AppLaunchTest"/>
 
 
         </classes>
