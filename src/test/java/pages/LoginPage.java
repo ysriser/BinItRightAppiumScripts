@@ -57,6 +57,11 @@ public class LoginPage {
     }
 
     public boolean isLoginPageDisplayed() {
-        return driver.findElements(signIn).size() > 0;
+
+        return new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("//android.widget.TextView[contains(@text,'Welcome')]")
+                ))
+                .isDisplayed();
     }
 }

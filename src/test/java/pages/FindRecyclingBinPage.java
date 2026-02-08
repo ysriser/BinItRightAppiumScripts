@@ -66,9 +66,7 @@ public class FindRecyclingBinPage {
     public boolean areMultipleBinTypesDisplayed() {
 
         List<WebElement> types = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(binTypeText));
-
         if (types.size() < 2) return false;
-
         String firstType = types.get(0).getText().trim();
 
         for (WebElement type : types) {
@@ -83,7 +81,6 @@ public class FindRecyclingBinPage {
     public boolean areAllBinsOfType(String expectedType) {
 
         List<WebElement> types = driver.findElements(binTypeText);
-
         if (types.isEmpty()) {
             return false; // no data = test should fail
         }
